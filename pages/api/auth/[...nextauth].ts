@@ -1,7 +1,10 @@
-import NextAuth from 'next-auth'
-import GitHubProvider from 'next-auth/providers/github'
+import NextAuth from "next-auth";
+import GitHubProvider from "next-auth/providers/github";
 
-const useSecureCookies = !!process.env.VERCEL_URL
+const useSecureCookies = !!process.env.VERCEL_URL;
+
+console.log(process.env.NEXTAUTH_URL);
+console.log(process.env.NEXTAUTH_URL_INTERNAL);
 
 export default NextAuth({
   providers: [
@@ -13,14 +16,14 @@ export default NextAuth({
   secret: process.env.SECRET as string,
   cookies: {
     sessionToken: {
-      name: `${useSecureCookies ? '__Secure-' : ''}next-auth.session-token`,
+      name: `${useSecureCookies ? "__Secure-" : ""}next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
-        path: '/',
-        domain: '.solutions-subdomain-auth.vercel.sh',
+        sameSite: "lax",
+        path: "/",
+        domain: ".test-auth-auth.vercel.sh",
         secure: useSecureCookies,
       },
     },
   },
-})
+});
