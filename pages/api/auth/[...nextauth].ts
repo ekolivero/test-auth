@@ -5,6 +5,7 @@ const useSecureCookies = !!process.env.VERCEL_URL;
 
 console.log(process.env.NEXTAUTH_URL);
 console.log(process.env.NEXTAUTH_URL_INTERNAL);
+console.log(process.env.VERCEL_URL);
 
 export default NextAuth({
   providers: [
