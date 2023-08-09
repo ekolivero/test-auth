@@ -22,7 +22,7 @@ export default NextAuth({
         httpOnly: true,
         sameSite: "lax",
         path: "/",
-        domain: "test-auth-iota.vercel.app",
+        domain: ".test-auth-iota.vercel.app",
         secure: useSecureCookies,
       },
     },
