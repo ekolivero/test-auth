@@ -15,16 +15,16 @@ export default NextAuth({
     }),
   ],
   secret: process.env.SECRET as string,
-  /* cookies: {
+  cookies: {
     sessionToken: {
       name: `${useSecureCookies ? "__Secure-" : ""}next-auth.session-token`,
       options: {
         httpOnly: true,
         sameSite: "lax",
         path: "/",
-        domain: ".test-auth-auth.vercel.sh",
+        domain: "test-auth-iota.vercel.app",
         secure: useSecureCookies,
       },
     },
-  }, */
+  },
 });
