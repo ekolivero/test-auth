@@ -15,7 +15,7 @@ export default NextAuth({
     }),
   ],
   secret: process.env.SECRET as string,
-  cookies: {
+  /* cookies: {
     sessionToken: {
       name: `${useSecureCookies ? "__Secure-" : ""}next-auth.session-token`,
       options: {
@@ -26,5 +26,5 @@ export default NextAuth({
         secure: useSecureCookies,
       },
     },
-  },
+  }, */
 });
